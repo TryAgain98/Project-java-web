@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- was: <?xml version="1.0" encoding="UTF-8"?> -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       
+       
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+        
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-4.0.xsd
+    http://www.springframework.org/schema/mvc 
+    http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+  
+    <context:component-scan base-package="act.demo.controller" />
+    <context:annotation-config></context:annotation-config>
+    <mvc:annotation-driven></mvc:annotation-driven>
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:prefix="/WEB-INF/jsp/"
+          p:suffix=".jsp" />
+  
+    <mvc:resources mapping="/css/**" location="WEB-INF/jsp/assets/css/"/>
+    <mvc:resources mapping="/chosen/**" location="WEB-INF/jsp/assets/css/lib/chosen/"/>
+    <mvc:resources mapping="/vector-map/**" location="WEB-INF/jsp/assets/css/lib/vector-map/"/>
+    <mvc:resources mapping="/datatable/**" location="WEB-INF/jsp/assets/css/lib/datatable/"/>
+    <mvc:resources mapping="/js/**" location="WEB-INF/jsp/assets/js/"/>
+    <mvc:resources mapping="/init/**" location="WEB-INF/jsp/assets/js/init/"/>
+    <mvc:resources mapping="/chosen/**" location="WEB-INF/jsp/assets/js/lib/chosen/"/>
+    <mvc:resources mapping="/data-table/**" location="WEB-INF/jsp/assets/js/lib/data-table/"/>
+    <mvc:resources mapping="/gmap/**" location="WEB-INF/jsp/assets/js/lib/gmap/"/>
+       <mvc:resources mapping="/images/**" location="WEB-INF/jsp/images/"/>
+         <mvc:resources mapping="/avatar/**" location="WEB-INF/jsp/images/avatar/"/>
+</beans>
